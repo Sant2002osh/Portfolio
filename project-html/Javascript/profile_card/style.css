@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:sans-serif;
+  margin-top: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.profile-card{
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 370px;
+width: 100%;
+background-color: rgb(247, 250, 249);
+border-radius: 25px;
+padding: 25px;
+box-shadow: 0 0 8px rgb(181, 179, 179);
+}
+
+.image{
+position: relative;
+height:150px;
+width: 150px;
+border-radius:50%;
+background-color: blue;
+padding: 2px;
+}
+.profile-img{
+height: 100%;
+width: 100%;
+object-fit:fill;
+border-radius:50%;
+background-color: rgb(235, 245, 238);
+padding:3 px;
+border: 3px solid bisque;
+}
+.profile-card .text-data{
+display: flex;
+flex-direction: column;
+align-items: center;
+color: rgb(5, 5, 5);
+}
+.text-data .name{
+font-size: 22px;
+font-weight: 500;
+}
+.text-data .job{
+font-size: 22px;
+font-weight:500;
+}
+.profile-card .media{
+display: flex;
+align-items: center;
+margin-top: 15px;
+}
+.media .link{
+color: blueviolet;
+font-size: 18px;
+display: flex;
+justify-content: center;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+margin: 0 8px;
+background-color: #fff;
+text-decoration: none;
+}
