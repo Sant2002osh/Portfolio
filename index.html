@@ -107,7 +107,7 @@
               </div>
             </div>
             <p>
-              I am Santosh, a student from SRMIST - Ramapuram Campus B.TECH graduate student(2024) with a CGPA of over 8.5, specializing in front-end development with expertise in HTML, CSS, JavaScript, PHP,  Bootstrap, and alongside a strong foundation in Python, and MySQL. Experienced in designing scalable, user-friendly interfaces, and actively pursuing full-stack development to bridge front-end and back-end technologies. A quick learner and collaborative team player, passionate about building innovative web solutions and committed to continuous learning through certifications and research in the latest development frameworks. Ready to apply dynamic ,full-stack solutions and contribute to impactful projects in your organization.
+              I am Santosh, a student from SRMIST - Ramapuram Campus B.TECH graduate(2024) with a CGPA of over 8.5, specializing in front-end development with expertise in HTML, CSS, JavaScript, PHP,  Bootstrap, and alongside a strong foundation in Python, and MySQL. Experienced in designing scalable, user-friendly interfaces, and actively pursuing full-stack development to bridge front-end and back-end technologies. A quick learner and collaborative team player, passionate about building innovative web solutions and committed to continuous learning through certifications and research in the latest development frameworks. Ready to apply dynamic ,full-stack solutions and contribute to impactful projects in your organization.
             </p>
             <a href="./myCV.pdf" role="button" class="btn btn-primary">Download CV</a>
           </div>
@@ -625,14 +625,12 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p><a target="_blank"
-                    href="https://maps.app.goo.gl/1Zpak2BBTabXMFmq9">Chennai,
-                    TamilNadu, India</a></p>
+                <p><a target="_blank" href="https://maps.app.goo.gl/1Zpak2BBTabXMFmq9">Chennai, TamilNadu, India</a></p>
               </div>
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p><a target="_blank" href=mailto:sant2002osh@gmail.com>sant2002osh@gmail.com</a></p>
+                <p><a target="_blank" href="mailto:sant2002osh@gmail.com">sant2002osh@gmail.com</a></p>
               </div>
               <div class="phone">
                 <i class="bx bxl-whatsapp"></i>
@@ -642,32 +640,33 @@
             </div>
           </div>
           <div class="col-lg-8 mt-5 mt-lg-0">
-            <div class="php-email-form">
+            <form id="contact-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="user_name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="user_email" id="email" placeholder="Your Email" required>
                 </div>
               </div>
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"
-                  required></textarea>
+                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
-                <div id="error-message"></div>
-                <div id="sent-message"></div>
+                <div id="response-message"></div>
               </div>
-              <div class="text-center"><button onclick="sendEmail()" type="submit">Send Message</button></div>
-            </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </section><!-- End Contact Section -->
+    </section>
+    <!-- End Contact Section -->
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -704,6 +703,34 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="assets/js/mail-send.js"></script>
   <script type="module" src="assets/js/mediumPost.mjs"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("TATvlHOxwTqlJPxWo");
+</script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const serviceID = 'service_s6hpnvi'; // Replace with your EmailJS Service ID
+    const templateID = 'template_dfetsle'; // Replace with your EmailJS Template ID
+
+    emailjs.sendForm(serviceID, templateID, form).then(
+      () => {
+        document.getElementById('response-message').textContent = 'Message Sent Successfully!';
+        document.getElementById('response-message').classList.add('alert', 'alert-success');
+        form.reset();
+      },
+      (error) => {
+        document.getElementById('response-message').textContent = 'Failed to Send Message.';
+        document.getElementById('response-message').classList.add('alert', 'alert-danger');
+        console.error('EmailJS Error:', error);
+      }
+    );
+  });
+</script>
+
+
   <!-- Bottstrap JS -->
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
