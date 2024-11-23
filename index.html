@@ -456,6 +456,24 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="project-html/Web/img/E-commerce-main/front.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Fresh Flowers</h4>
+                <p>Website</p>
+                <div class="portfolio-links">                  
+                  <a href="project-html/Web/img/E-commerce-main/front.png" data-gallery="portfolioGallery" 
+                    class="portfolio-lightbox"  title="Website <br> FlipZon"><i class="bx bx-plus"></i></a>
+                    <!-- Hidden links for additional screenshots -->
+                     <a href="project-html/Web/img/E-commerce-main/1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"  style="display: none;" title="Screenshot 1"></a>
+                     <a href="project-html/Web/img/E-commerce-main/2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" style="display: none;" title="Screenshot 2"></a>
+                     <a href="project-html/Web/img/E-commerce-main/3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" style="display: none;" title="Screenshot 3"></a>
+                     <a href="project-html/Web/E-commerce-main/index.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-php">
             <div class="portfolio-wrap">
               <img src="project-html/PHP/img/MSSR Home Service/front.png" class="img-fluid" alt="">
@@ -486,6 +504,19 @@
                      <a href="project-html/PHP/img/MSSR Home Service/19.png" data-gallery="portfolioGallery" class="portfolio-lightbox" style="display: none;" title="Screenshot 18"></a>
                      <a href="project-html/PHP/img/MSSR Home Service/20.png" data-gallery="portfolioGallery" class="portfolio-lightbox" style="display: none;" title="Screenshot 19"></a>
                      <a href="project-html/PHP/img/MSSR Home Service/front.png" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-php">
+            <div class="portfolio-wrap">
+              <img src="project-html/PHP/img/todolist.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>ToDoList</h4>
+                <p>PHP Website</p>
+                <div class="portfolio-links">                  
+                  <a href="project-html/PHP/img/todolist.png" data-gallery="portfolioGallery" 
+                    class="portfolio-lightbox"  title="Website <br> FlipZon"><i class="bx bx-plus"></i></a>
                 </div>
               </div>
             </div>
@@ -717,7 +748,7 @@
 
     emailjs.sendForm(serviceID, templateID, form).then(
       () => {
-        document.getElementById('response-message').textContent = 'Thank You for Contacting Me!';
+        document.getElementById('response-message').textContent = 'Message Sent Successfully!';
         document.getElementById('response-message').classList.add('alert', 'alert-success');
         form.reset();
       },
